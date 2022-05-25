@@ -7,11 +7,107 @@
 	
     <div class="reveal">
 		<div class="slides">
+            
             <section data-markdown>
                 ## Database as Code
                 #### Not only migrations
-                by Maksim Gramin
-              </section>
+                by **@mgramin**
+            </section>
+
+            <section data-markdown>
+                ### Agenda
+                - 
+            </section>
+
+            <section data-markdown>
+                ### Everything as Code
+
+                - **Pipeline** *as Code*
+                - **Infrastructure** *as Code*
+                - **Diagram** *as Сode*
+                - **Documentation** *as Сode*
+                - **Tests** *as Code*
+            </section>
+
+            <section data-markdown>
+                ### Everything as Code. Pros
+            </section>
+
+            <section data-markdown>
+                ### Everybody ~Lies~ is Coding
+
+                - Developers
+                - Testers
+                - Engineers
+                - Analysts
+                - Managers
+            </section>
+
+            <section data-markdown>
+                ### Database as Code
+
+                - All changes scripted and automated
+                - All changes under version control
+                - Ability to release on demand
+                - DBA's integrated with Dev and Ops
+            </section>
+
+
+            <section data-markdown>
+                - Liquibase
+                - Flyway
+                - Sqitch
+                - Skeema
+            </section>
+
+            <section data-markdown 
+                    data-background-size="contain"
+                    data-background-image="images/liquibase.jpg">
+            </section>
+
+
+            <section data-markdown>
+                ### DB isn't only schema changes
+
+                - Queries
+                - Administration
+                - Monitoring
+                - Data Transformation
+                - Documentation
+                - etc
+            </section>
+
+
+
+            
+            <section data-markdown 
+                    data-background-size="contain"
+                    data-background-image="images/sql_everywhere.jpg">
+            </section>
+
+
+            <section data-markdown>
+                ### SQL Everywhere
+
+                - **40+** years history
+                - Was made for **Humans**
+            </section>
+
+
+            <section data-markdown data-background-color="red">
+                ### SQL Hell
+
+                - Generated queries
+                - Queries injected in another code like literals
+                - Queries in config files
+                - Different versions
+            </section>
+
+            <section data-markdown>
+                ### Keep SQL as SQL
+
+            </section>
+
 		</div>
 	</div>
 
@@ -23,7 +119,8 @@
             controls: true,
             progress: true,
             history: true,
-            plugins: [ RevealMarkdown ]
+            plugins: [ RevealMarkdown ],
+            slideNumber: true
         });
 	</script>
 
