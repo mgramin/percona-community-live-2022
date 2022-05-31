@@ -9,12 +9,15 @@
 		<div class="slides">
 
             
-            <section data-markdown 
-                    data-background-size="contain"
-                    data-background-image="images/code_background.png">
-                    ## Database as Code
-                    #### Not only migrations
-                    by **@mgramin**
+            <section data-background-size="contain" data-background-image="images/code_background.png">
+                <h1>Database as Code</h1>
+                <h3>Not only migrations</h3>
+                <span>@mgramin</span>
+                <aside class="notes">
+                    Hey! My name is Maks.
+                    I am independent database consultant and big fun of SQL.
+                    And today we gonna talk about "Database as Code. Not Only Migrations" topic.
+                </aside>
             </section>
 
 
@@ -99,10 +102,19 @@
 
 
             <section data-markdown>
+                - Relational
+                - Analytical
+                - Streaming
+                - Сloud
+                - etс
+            </section>
+
+
+            <section data-markdown>
                 ### SQL Hell
 
-                - Generated queries
-                - Queries injected in another code like literals
+                - Generated Queries
+                - injected Queries
                 - Queries in config files
                 - Different versions
             </section>
@@ -115,25 +127,34 @@
             <section data-markdown>
                 ### "Database as Code 2.0"
 
+                - Treat your DB as Code
+                - Code Lifecycle
+                - SQL is a main DB Language
+                - Database code is not only DDL
+                - SQL is not a bytecode
                 - Git is a single source of Truth
-                - ...
-                - ...
             </section>
 
             <section data-markdown>
                 ### Is There It in WildLife?
             </section>
 
+            <section data-markdown 
+                    data-background-size="contain"
+                    data-background-image="images/what_is_dbt.jpg">
+            </section>
+
+
             <section data-markdown>
-                ### DBT
+                ### Data Maping
+                - Yesql
+                - HugSQL
+                - SQLDelight
+                - PugSQL
             </section>
 
             <section data-markdown>
-                ### #YeSQL
-            </section>
-
-            <section data-markdown>
-                ### Malewicz
+                ### Project Malewicz
             </section>
 
             <section data-markdown>
@@ -150,13 +171,14 @@
 
 	<script src="node_modules/reveal.js/dist/reveal.js"></script>
     <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
 
 	<script>
 		Reveal.initialize({
             controls: true,
             progress: true,
             history: true,
-            plugins: [ RevealMarkdown ],
+            plugins: [ RevealMarkdown, RevealNotes ],
             slideNumber: true
         });
 	</script>

@@ -85,11 +85,14 @@ But in dabases World we already have great universal language with marvelous his
 
 SQL allows you standatizied declarative access not only to relational DB, but to non relational DB, streaming, files, cloud inventory and etc
 
-[List of SQL-like systems]
-- PostgreSQL
-- ClickHouse
-- Kafka
-- Resmo, Pipe...
+In nowaday we use SQL everywhere - in traditional relational system (like PostgreSQL and MySQL), in non-relational (Cassandra, Tarantool) in analytical systems (like Snowflake, ClickHouse), in streaming platforms (like Kafka and Flink) in сloud infrastructure (Steampipe, Resmo, CloudQuery)
+
+- Relational DB
+- Non-Relational DB
+- Analytical DB
+- Streaming Platforms
+- Сloud
+
 
 
 ### SQL Hell
@@ -98,8 +101,14 @@ Like a DLL hell or JAR hell
 
 - generated queries
 - queries injected in another code like literals
-- queries in config files
+- queries in config files of variuous systems
 - different versions
+
+- Generated Queries
+- injected Queries
+- Queries in config files
+- Different versions
+
 
 And its nightmare
 - we have not single point
@@ -120,8 +129,13 @@ benefits :
 - common tools
 
 
+### Is There It in WildLife?
+
+And finally lets look
+
+
 https://twitter.com/pedram_navid/status/1514080871103356929?t=6eSGcCrQGmFUdraif61pJg&s=19
 
 
 
-And lets try create mode database as code tools together!
+And lets try create more database as code tools together!
