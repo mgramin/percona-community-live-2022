@@ -13,10 +13,11 @@
                 <h1>Database as Code</h1>
                 <h3>Not only migrations</h3>
                 <span>@mgramin</span>
+
                 <aside class="notes">
                     Hey! My name is Maks.
-                    I am independent database consultant and big fun of SQL.
-                    And today we gonna talk about "Database as Code. Not Only Migrations" topic.
+                    I am independent database consultant, researcher and big fun of SQL.
+                    And today we gonna talk about "Database as Code. Not Only Migrations".
                 </aside>
             </section>
 
@@ -26,87 +27,164 @@
 
                 - What is it?
                 - Is there it in real life?
-                - Is Migration Scripts just the beginning?
+                - Migration Scripts are just the Beginning
+
+                Note:
+                We will discuss:
+                - What is it?
+                - Is there "Database as Code" in real life, in wildlife?
+                - And we will see that migration scripts are just the very beginning of the hard road to "Database as Code"
+    
+                Let's Go!
             </section>
+
 
             <section data-markdown>
                 ### Everything as Code
 
-                - **Pipeline** *as Code*
-                - **Infrastructure** *as Code*
-                - **Diagram** *as Сode*
-                - **Documentation** *as Сode*
-                - **Tests** *as Code*
+                - **Pipeline** (Jenkinsfile, .gitlab-ci.yml)
+                - **Infrastructure** (Ansible, Terraform, K8s)
+                - **Diagram** (Mermaid, PlantUML)
+                - **Documentation** (Markdown, AsciiDoc)
+                - **Tests** (Gatling, Cucumber)
+
+                Note:
+                And we will start with "Everything as Code" things.
+                
+                "Everything as Code" (as we now) is a philosophy, 
+                where any IT area might be represented as a plain code. 
+                
+                And we can work with it using standard tools and technologies 
+                (like code editors, IDE, control version systems, static analyzis, CI/CD pipelines etc.).
+                
+                And yes, indeed, there are many "Everything as Code" realizations for many areas, 
+                for example:
             </section>
+
 
             <section data-markdown>
                 ### Everything as Code. Pros
+
+                - No Monstrous GUI
+                - Full Version Control
+                - Code Review
+                - Testing
+                - Repeatable
+                - Everybody ~Lies~ is Coding
+
+                Note:
+                We are used to the everything as code things
             </section>
+
 
             <section data-markdown>
-                ### Everybody ~Lies~ is Coding
+                ## How about "Database as Code"?
 
-                - Developers
-                - Testers
-                - Engineers
-                - Analysts
-                - Managers
+                Note:
+                But how about "Database as Code"?
             </section>
 
 
-            <section data-markdown 
+            <section 
                     data-background-size="contain"
                     data-background-image="images/database_as_code.jpg">
+
+                <aside class="notes" data-markdown>
+                    It was a very exotic combination of words, 
+                    but Dan North in hist talk "Aren't we forgetting someone?"
+                    proposed four simple rules for treating a database like Code:
+
+                    - All changes scripted and automated
+                    - All changes under version control
+                    - Ability to release on demand
+                    - DBA's integrated with Dev and Ops
+                </aside>
             </section>
 
 
-            <section data-markdown>
+            <!-- <section data-markdown>
                 - Flyway
+                - gh-ost
                 - Sqitch
                 - Skeema
-            </section>
+
+                Note:
+                It's been six years, and nowadays, 
+                it's hard to find a project that doesn't follow these rules (at least the first three). 
+                
+                There are a lot of different database migration tools 
+                and different ways to integrate it with your VCS and your CI/CD pipeline.
+                
+                And it's really great!
+                
+                TODO move to the next slide
+            </section> -->
             
 
-            <section data-markdown 
+            <section 
                     data-background-size="contain"
                     data-background-image="images/liquibase.jpg">
+
+                <aside class="notes" data-markdown>
+                    It's been six years, and nowadays, 
+                    it's hard to find a project that doesn't follow these rules (at least the first three). 
+                    
+                    There are a lot of different database migration tools 
+                    and different ways to integrate it with your Version Control system and your CI/CD pipeline.
+
+                    For example:
+                    - Flyway
+                    - GitHub's online schema migration tool
+                    - Sqitch
+                    - Skeema
+                    - and ofcourse Liquibase
+                    
+                    And it's really great!
+                </aside>
             </section>
 
 
             <section data-markdown>
-                ### DB isn't only schema changes
+                ### DB isn't only Schema
 
-                - Queries
+                Note:
+                But we know - DB is not only Schema, is not only DDL!
+            </section>
+
+            <section data-markdown>
+                - Queries (DML)
                 - Administration
                 - Monitoring
                 - Data Transformation
                 - Documentation
                 - etc
+                
+                Note:
+                -
+                <!-- Database is also are: -->
+                - First of all, DB is Queries (DML for data and metadata)
+                - Administration tasks (like space managment, memory management, )
+                - Monitoring (metrics gathering and perfomance troubleshooting)
+                - Data Transformation
+                - Documentation (like diagrams)
+                - and much more
+
+                <!-- And all that things tasks we can done with SQL -->
+
+                And there is a special language for all these things.
+                And of course it is SQL!
+
+
             </section>
-
-
 
             
-            <section data-markdown 
+            <section 
                     data-background-size="contain"
                     data-background-image="images/sql_everywhere.jpg">
-            </section>
-
-
-            <section data-markdown>
-                ### SQL Everywhere
-
-                - **40+** years history
-                - Was made for **Humans**
-            </section>
-
-
-            <section data-markdown>
-                - Relational
-                - Analytical
-                - Streaming
-                - Сloud
-                - etс
+                
+                <aside class="notes" data-markdown>
+                    SQL is lingwa universala for data and metadata
+                </aside>
             </section>
 
 
@@ -117,10 +195,21 @@
                 - injected Queries
                 - Queries in config files
                 - Different versions
+                
+                Note:
+                But on the other hand we have problems
+                
+                Our SQL-queries scattered everywhere
+
             </section>
+
 
             <section data-markdown>
                 ### Keep All SQL as Code
+                
+                Note:
+                
+                Is a dead simple idea
             </section>
 
 
@@ -133,15 +222,27 @@
                 - Database code is not only DDL
                 - SQL is not a bytecode
                 - Git is a single source of Truth
+                
+                Note:
+
             </section>
+
 
             <section data-markdown>
                 ### Is There It in WildLife?
+                
+                Note:
+
             </section>
 
-            <section data-markdown 
+
+            <section 
                     data-background-size="contain"
                     data-background-image="images/what_is_dbt.jpg">
+
+                <aside data-markdown class="notes">
+
+                </aside>
             </section>
 
 
@@ -151,10 +252,16 @@
                 - HugSQL
                 - SQLDelight
                 - PugSQL
+                
+                Note:
+
             </section>
 
             <section data-markdown>
                 ### Project Malewicz
+                
+                Note:
+
             </section>
 
             <section data-markdown>
@@ -164,6 +271,10 @@
                 - https://github.com/mgramin/database-as-code
                 - https://github.com/mgramin/malewicz
                 - https://github.com/mgramin/awesome-db-tools
+
+                Note:
+
+                Thank you! I'm open do discussions
             </section>
 
 		</div>
@@ -179,7 +290,9 @@
             progress: true,
             history: true,
             plugins: [ RevealMarkdown, RevealNotes ],
-            slideNumber: true
+            slideNumber: true,
+            autoAnimate: false,
+            transition: 'none'
         });
 	</script>
 
