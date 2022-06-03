@@ -57,8 +57,13 @@
                 And we can work with it using standard tools and technologies 
                 (like code editors, IDE, control version systems, static analyzis, CI/CD pipelines etc.).
                 
-                And yes, indeed, there are many "Everything as Code" realizations for many areas, 
-                for example:
+                And yes, indeed, there are many "Everything as Code" realizations for many areas.
+                For example:
+                - Gitlab CI
+                - Ansible playbooks
+                - Mernaid.js
+                - Markdown
+                - etc
             </section>
 
 
@@ -68,12 +73,18 @@
                 - No Monstrous GUI
                 - Full Version Control
                 - Code Review
-                - Testing
-                - Repeatable
+                - Testing & Repeatable
                 - Everybody ~Lies~ is Coding
 
                 Note:
-                We are used to the everything as code things
+                We are used to the Everything as Code things
+
+                - No Monstrous GUI - Where you are afraid to click something wrong
+                - Full Version Control - For all your changes
+                - Code Review - You can show your code something else
+                - Testing - Before deploy in Production you can Deploy on Dev and Test environments
+                - Everybody in your team is Coding and using the same tools
+
             </section>
 
 
@@ -81,7 +92,7 @@
                 ## How about "Database as Code"?
 
                 Note:
-                But how about "Database as Code"?
+                But how about "DATABASE as Code"?
             </section>
 
 
@@ -94,32 +105,14 @@
                     but Dan North in hist talk "Aren't we forgetting someone?"
                     proposed four simple rules for treating a database like Code:
 
-                    - All changes scripted and automated
-                    - All changes under version control
-                    - Ability to release on demand
-                    - DBA's integrated with Dev and Ops
+                    - All database changes are scripted and automated
+                    - All database changes are under version control
+                    - Ability to release on demand at any time
+                    And
+                    - DBA should be integrated with Dev and Ops people
                 </aside>
             </section>
 
-
-            <!-- <section data-markdown>
-                - Flyway
-                - gh-ost
-                - Sqitch
-                - Skeema
-
-                Note:
-                It's been six years, and nowadays, 
-                it's hard to find a project that doesn't follow these rules (at least the first three). 
-                
-                There are a lot of different database migration tools 
-                and different ways to integrate it with your VCS and your CI/CD pipeline.
-                
-                And it's really great!
-                
-                TODO move to the next slide
-            </section> -->
-            
 
             <section 
                     data-background-size="contain"
@@ -148,10 +141,13 @@
                 ### DB isn't only Schema
 
                 Note:
-                But we know - DB is not only Schema, is not only DDL!
+                But we know - DB is not only Schema, is not only DDL operations!
             </section>
 
+
             <section data-markdown>
+                ### DB isn't only Schema
+
                 - Queries (DML)
                 - Administration
                 - Monitoring
@@ -160,21 +156,17 @@
                 - etc
                 
                 Note:
-                -
-                <!-- Database is also are: -->
-                - First of all, DB is Queries (DML for data and metadata)
-                - Administration tasks (like space managment, memory management, )
+                First of all, DB is Data and Queries to Data (DML for data and metadata)
+                
+                Also databases needs:
+                - Administration (like space managment and memory management)
                 - Monitoring (metrics gathering and perfomance troubleshooting)
                 - Data Transformation
-                - Documentation (like diagrams)
-                - and much more
+                - Documentation (like Diagrams)
+                - and all this stuff
 
-                <!-- And all that things tasks we can done with SQL -->
-
-                And there is a special language for all these things.
-                And of course it is SQL!
-
-
+                And there is a special Language for all these things.
+                And of course - it is SQL!
             </section>
 
             
@@ -183,7 +175,9 @@
                     data-background-image="images/sql_everywhere.jpg">
                 
                 <aside class="notes" data-markdown>
-                    SQL is lingwa universala for data and metadata
+                    SQL is a universal language for data and metadata.
+
+                    And SQL first of all was made by humans for humans, not for machines.
                 </aside>
             </section>
 
@@ -194,13 +188,20 @@
                 - Generated Queries
                 - injected Queries
                 - Queries in config files
-                - Different versions
                 
                 Note:
-                But on the other hand we have problems
+                But on the other hand we have some problems with SQL, 
+                I call it "SQL Hell" (like "Jar Hell" or "DLL Hell").
                 
-                Our SQL-queries scattered everywhere
+                Our SQL-queries scattered everywhere:
+                
+                - Our applicatons generate tonns of Dynamic Queries
+                - Many Static Queries are injected directly into the code of another program 
+                (like Java, Python or something else)
+                - or placed in configuration files (like YML, JSON or TOML)
+                
 
+                And we can't control, test and trust these tons of SQL.
             </section>
 
 
@@ -209,12 +210,13 @@
                 
                 Note:
                 
-                Is a dead simple idea
+                But how about dead simple idea -
+                "Keep All SQL-queries as normal Code"?
             </section>
 
 
             <section data-markdown>
-                ### "Database as Code 2.0"
+                ### Database as Code 2.0
 
                 - Treat your DB as Code
                 - Code Lifecycle
@@ -228,11 +230,18 @@
             </section>
 
 
+            <!-- <section data-markdown>
+                #### mgramin/database-as-code
+            </section> -->
+
+
             <section data-markdown>
                 ### Is There It in WildLife?
                 
                 Note:
+                But Is There It in WildLife?
 
+                And our answer: "Yes it is!"
             </section>
 
 
@@ -261,6 +270,8 @@
                 ### Project Malewicz
                 
                 Note:
+
+                Is Yet Another graphic SQL-client (or SQL-manager) but...
 
             </section>
 
